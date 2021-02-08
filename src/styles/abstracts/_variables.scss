@@ -1,0 +1,35 @@
+//////////////////////////////
+// VARIABLES
+
+/******************
+  COLOR
+******************/
+
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue-1: hsl(200, 15%, 8%);
+  --very-dark-blue-2: hsl(207, 26%, 17%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/*************************************
+TYPOGRAPHY
+*************************************/
+
+// Font family
+$nunito: "Nunito Sans", sans-serif;
+
+// Font size
+$homepage-items: 1.4rem;
+$detail-page: 1.6rem;
+
+/*************************************
+BREAKPOINTS
+*************************************/
+$point-375: 23.4375em;
+$point-480: 30em;
+$point-768: 48em;
+$point-1024: 64em;
+$point-1200: 75em;

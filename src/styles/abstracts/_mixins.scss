@@ -1,0 +1,29 @@
+//////////////////////////////
+// MIXINS
+
+/******************
+  MEDIA QUERY
+******************/
+@mixin breakpoint($point) {
+  @if $point == laptop {
+    @media only screen and (max-width: $point-1200) {
+      @content;
+    }
+  } @else if $point == tablet-landscape {
+    @media only screen and (max-width: $point-1024) {
+      @content;
+    }
+  } @else if $point == tablet-portrait {
+    @media only screen and (max-width: $point-768) {
+      @content;
+    }
+  } @else if $point == mobile-lg {
+    @media only screen and (max-width: $point-480) {
+      @content;
+    }
+  } @else if $point == mobile-sm {
+    @media only screen and (max-width: $point-375) {
+      @content;
+    }
+  }
+}

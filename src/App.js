@@ -1,10 +1,11 @@
-import "./App.css";
+import Header from "./components/layouts/Header";
+import "./App.scss";
 
 const App = () => {
   return (
-    <div>
-      <h1>Where in the world?</h1>
-    </div>
+    <main>
+      <Header />
+    </main>
   );
 };
 

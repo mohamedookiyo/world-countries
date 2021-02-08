@@ -1,0 +1,9 @@
+//////////////////////////////
+// THEME: LIGHT
+
+html[data-theme="light"] {
+  --body-bg: var(--very-light-gray);
+  --text-color: var(--very-dark-blue-1);
+  --elements-bg: var(--white);
+  --input-color: var(--dark-gray);
+}

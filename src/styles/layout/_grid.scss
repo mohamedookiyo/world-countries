@@ -1,0 +1,20 @@
+//////////////////////////////
+// GRID
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @include breakpoint(laptop) {
+    padding: 0 6rem;
+  }
+
+  @include breakpoint(tablet-portrait) {
+    padding: 0 4rem;
+  }
+
+  @include breakpoint(mobile-lg) {
+    padding: 0 2rem;
+  }
+}

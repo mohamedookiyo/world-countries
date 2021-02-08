@@ -1,0 +1,87 @@
+.header {
+  background-color: var(--elements-bg);
+  box-shadow: 0 0 2rem rgba(43, 57, 69, 0.1);
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include breakpoint(tablet-portrait) {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.6rem;
+
+    @include breakpoint(laptop) {
+      font-size: 2.4rem;
+    }
+
+    @include breakpoint(tablet-portrait) {
+      font-size: 2.2rem;
+    }
+
+    @include breakpoint(mobile-sm) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__theme {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & svg {
+      fill: var(--text-color);
+    }
+
+    &-label {
+      position: relative;
+      width: 4.4rem;
+      height: 2.2rem;
+    }
+
+    &-checkbox {
+      display: none;
+
+      &:checked + .header__slider:before {
+        transform: translateX(calc(4.4rem - (1.4rem + 1rem)));
+      }
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    background-color: var(--text-color);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+    &.round {
+      border-radius: 1.1rem;
+
+      &:before {
+        border-radius: 50%;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      bottom: 0.4rem;
+      background-color: var(--body-bg);
+      width: 1.4rem;
+      height: 1.4rem;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
