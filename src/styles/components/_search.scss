@@ -1,0 +1,42 @@
+//////////////////////////////
+// SEARCH
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  border-radius: 0.8rem;
+
+  @include breakpoint(mobile-lg) {
+    width: 100%;
+  }
+
+  & svg {
+    position: absolute;
+    left: 3rem;
+    fill: var(--search-icon-color);
+  }
+
+  & input {
+    font-family: inherit;
+    font-weight: 600;
+    background-color: var(--elements-bg);
+    color: var(--input-color);
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 2.5rem 3rem 2.5rem 8rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2rem rgba(43, 57, 69, 0.15);
+
+    &::placeholder {
+      font-size: 1.4rem;
+      color: var(--input-color);
+    }
+
+    &:focus {
+      outline: transparent;
+    }
+  }
+}

@@ -18,3 +18,12 @@
     padding: 0 2rem;
   }
 }
+
+.grid {
+  display: grid;
+
+  &__home {
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 6rem;
+  }
+}

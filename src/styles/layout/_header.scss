@@ -34,9 +34,11 @@
   &__theme {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
 
     & svg {
+      width: 1.8rem;
+      height: 1.8rem;
       fill: var(--text-color);
     }
 

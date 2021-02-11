@@ -10,10 +10,16 @@ body {
   line-height: 1.5;
   background-color: var(--body-bg);
   color: var(--text-color);
+  overflow-y: scroll;
 }
 
 h1,
 h2,
 h3 {
   font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,0 +1,18 @@
+//////////////////////////////
+// HOME
+
+.home {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  &__filter {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include breakpoint(mobile-lg) {
+      flex-direction: column;
+      gap: 5rem;
+    }
+  }
+}
