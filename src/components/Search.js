@@ -1,3 +1,4 @@
+// Search component
 const Search = () => {
   return (
     <form className="search">

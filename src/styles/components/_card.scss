@@ -1,0 +1,59 @@
+//////////////////////////////
+// CARD
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--elements-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem rgba(43, 57, 69, 0.15);
+  transition: box-shadow 0.4s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(43, 57, 69, 0.25);
+  }
+
+  @include breakpoint(mobile-lg) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(mobile-sm) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__image {
+    max-width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 2rem 4rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__data {
+    margin-top: auto;
+
+    & > * + * {
+      margin-top: 0.4rem;
+    }
+
+    & p {
+      font-weight: 800;
+    }
+
+    & span {
+      font-weight: 400;
+    }
+  }
+}

@@ -10,7 +10,7 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    @include breakpoint(mobile-lg) {
+    @include breakpoint(tablet-portrait) {
       flex-direction: column;
       gap: 5rem;
     }

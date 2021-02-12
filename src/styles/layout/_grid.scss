@@ -2,19 +2,15 @@
 // GRID
 
 .container {
-  max-width: 114rem;
+  max-width: 144rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 8rem;
 
   @include breakpoint(laptop) {
     padding: 0 6rem;
   }
 
   @include breakpoint(tablet-portrait) {
-    padding: 0 4rem;
-  }
-
-  @include breakpoint(mobile-lg) {
     padding: 0 2rem;
   }
 }
@@ -23,7 +19,8 @@
   display: grid;
 
   &__home {
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     grid-gap: 6rem;
+    margin-top: 6rem;
   }
 }

@@ -5,8 +5,16 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 40%;
   border-radius: 0.8rem;
+
+  @include breakpoint(laptop) {
+    width: 50%;
+  }
+
+  @include breakpoint(tablet-portrait) {
+    width: 70%;
+  }
 
   @include breakpoint(mobile-lg) {
     width: 100%;

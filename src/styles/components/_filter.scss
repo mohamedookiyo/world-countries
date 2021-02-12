@@ -2,6 +2,7 @@
 // FILTER
 
 .filter {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -39,12 +40,16 @@
   }
 
   &__options {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    display: none;
     background-color: var(--elements-bg);
     font-weight: 600;
-    display: none;
     list-style: outside none none;
     margin: 0;
     padding: 0;
+    border: 0.2rem solid var(--dropdown-border-color);
     border-radius: 0.5rem;
     box-shadow: 0 0 2rem rgba(43, 57, 69, 0.15);
 
