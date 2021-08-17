@@ -1,31 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // Card component
-const Card = () => {
-  return (
-    <Link to="/country/name" className="card">
-      <img
-        className="card__image"
-        src="https://images.unsplash.com/photo-1491508624904-7669836a24ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80"
-        alt="Sunset"
-      />
+const Card = ({ country }) => {
+	return (
+		<Link to={`/country/${country.name}`} className="card">
+			<div className="card__image">
+				<img src={country.flag} alt={`The flag of ${country.name}`} />
+			</div>
 
-      <div className="card__text">
-        <h2 className="card__title">Country Name</h2>
-        <div className="card__data">
-          <p>
-            Population: <span>423,647,101</span>
-          </p>
-          <p>
-            Region: <span>Europe</span>
-          </p>
-          <p>
-            Capital: <span>Country Capital</span>
-          </p>
-        </div>
-      </div>
-    </Link>
-  );
+			<div className="card__text">
+				<h2 className="card__title">{country.name}</h2>
+				<div className="card__data">
+					<p>
+						Population:{' '}
+						<span>
+							{new Intl.NumberFormat('en-US').format(country.population)}
+						</span>
+					</p>
+					<p>
+						Region: <span>{country.region}</span>
+					</p>
+					<p>
+						Capital: <span>{country.capital}</span>
+					</p>
+				</div>
+			</div>
+		</Link>
+	);
 };
 
 export default Card;

@@ -1,10 +1,12 @@
 //////////////////////////////
 // THEME: DARK
 
-html[data-theme="dark"] {
-  --body-bg: var(--very-dark-blue-2);
-  --text-color: var(--white);
-  --elements-bg: var(--dark-blue);
-  --search-icon-color: var(--white);
-  --dropdown-border-color: #37474f;
+html[data-theme='dark'] {
+	--body-bg: var(--very-dark-blue-2);
+	--text-color: var(--white);
+	--elements-bg: var(--dark-blue);
+	--search-icon-color: var(--white);
+	--dropdown-border-color: #37474f;
+	--filters-hover: var(--very-dark-blue-2);
+	--roller-bg: var(--very-light-gray);
 }

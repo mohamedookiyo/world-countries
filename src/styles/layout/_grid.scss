@@ -2,25 +2,34 @@
 // GRID
 
 .container {
-  max-width: 144rem;
-  margin: 0 auto;
-  padding: 0 8rem;
+	max-width: 144rem;
+	margin: 0 auto;
+	padding: 0 8rem;
 
-  @include breakpoint(laptop) {
-    padding: 0 6rem;
-  }
+	@include breakpoint(laptop) {
+		padding: 0 6rem;
+	}
 
-  @include breakpoint(tablet-portrait) {
-    padding: 0 2rem;
-  }
+	@include breakpoint(tablet-portrait) {
+		padding: 0 4rem;
+	}
+
+	@include breakpoint(mobile-lg) {
+		padding: 0 2rem;
+	}
 }
 
 .grid {
-  display: grid;
+	display: grid;
 
-  &__home {
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    grid-gap: 6rem;
-    margin-top: 6rem;
-  }
+	&__home {
+		grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+		grid-gap: 6rem;
+		margin-top: 6rem;
+		position: relative;
+
+		@include breakpoint(tablet-portrait) {
+			grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+		}
+	}
 }

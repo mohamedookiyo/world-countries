@@ -1,0 +1,37 @@
+//////////////////////////////
+// ERROR
+
+.error {
+	display: grid;
+	grid-template-columns: 1fr 35%;
+	gap: 2rem;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	word-break: break-all;
+
+	@include breakpoint(tablet-portrait) {
+		grid-template-columns: 1fr;
+		gap: 4rem;
+	}
+
+	&__message {
+		font-size: 2rem;
+		margin-right: 4rem;
+
+		@include breakpoint(tablet-portrait) {
+			text-align: center;
+			margin-right: 0;
+		}
+	}
+
+	&__image {
+		max-width: 100%;
+
+		@include breakpoint(tablet-portrait) {
+			max-width: 60%;
+			margin: 0 auto;
+		}
+	}
+}

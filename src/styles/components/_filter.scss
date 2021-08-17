@@ -2,74 +2,79 @@
 // FILTER
 
 .filter {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 22rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 22rem;
 
-  @include breakpoint(mobile-lg) {
-    width: 60%;
-  }
+	@include breakpoint(mobile-lg) {
+		width: 60%;
+	}
 
-  @include breakpoint(mobile-sm) {
-    width: 75%;
-  }
+	@include breakpoint(mobile-sm) {
+		width: 75%;
+	}
 
-  &__dropdown {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--elements-bg);
-    font-weight: 600;
-    padding: 2.5rem 3rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 2rem rgba(43, 57, 69, 0.15);
-    cursor: pointer;
+	&__dropdown {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: var(--elements-bg);
+		font-weight: 600;
+		padding: 2.5rem 3rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 0 2rem rgba(43, 57, 69, 0.15);
+		cursor: pointer;
 
-    & svg {
-      width: 1.6rem;
-      height: 1.6rem;
-      fill: var(--text-color);
-      transition: transform 0.4s ease-in-out;
+		& svg {
+			width: 1.6rem;
+			height: 1.6rem;
+			fill: var(--text-color);
+			transition: transform 0.4s ease-in-out;
 
-      &.active {
-        transform: rotate(-180deg);
-      }
-    }
-  }
+			&.active {
+				transform: rotate(-180deg);
+			}
+		}
+	}
 
-  &__options {
-    position: absolute;
-    top: 8rem;
-    width: 100%;
-    display: none;
-    background-color: var(--elements-bg);
-    font-weight: 600;
-    list-style: outside none none;
-    margin: 0;
-    padding: 0;
-    border: 0.2rem solid var(--dropdown-border-color);
-    border-radius: 0.5rem;
-    box-shadow: 0 0 2rem rgba(43, 57, 69, 0.15);
+	&__options {
+		position: absolute;
+		top: 8rem;
+		width: 100%;
+		display: none;
+		background-color: var(--elements-bg);
+		font-weight: 600;
+		list-style: outside none none;
+		margin: 0;
+		padding: 0;
+		border: 0.2rem solid var(--dropdown-border-color);
+		border-radius: 0.5rem;
+		box-shadow: 0 0 2rem rgba(43, 57, 69, 0.15);
+		z-index: 2;
 
-    &.active {
-      display: block;
-      animation: dropDown 0.4s ease-in-out;
-    }
+		&.active {
+			display: block;
+			animation: dropDown 0.4s ease-in-out;
+		}
 
-    & li {
-      padding: 1rem 3rem;
-      transition: background-color 0.4s ease-in-out;
-      cursor: pointer;
+		& li {
+			padding: 1rem 3rem;
+			transition: background-color 0.4s ease-in-out;
+			cursor: pointer;
 
-      &:not(:last-child) {
-        margin-bottom: 0.5rem;
-      }
+			&:not(:last-child) {
+				margin-bottom: 0.5rem;
+			}
 
-      &:hover {
-        background-color: var(--body-bg);
-      }
-    }
-  }
+			&.active {
+				background-color: var(--filters-hover);
+			}
+
+			&:hover {
+				background-color: var(--filters-hover);
+			}
+		}
+	}
 }

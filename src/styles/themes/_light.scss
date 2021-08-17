@@ -1,11 +1,13 @@
 //////////////////////////////
 // THEME: LIGHT
 
-html[data-theme="light"] {
-  --body-bg: var(--very-light-gray);
-  --text-color: var(--very-dark-blue-1);
-  --elements-bg: var(--white);
-  --input-color: var(--dark-gray);
-  --search-icon-color: var(--dark-gray);
-  --dropdown-border-color: rgba(43, 57, 69, 0.15);
+html[data-theme='light'] {
+	--body-bg: var(--very-light-gray);
+	--text-color: var(--very-dark-blue-1);
+	--elements-bg: var(--white);
+	--input-color: var(--dark-gray);
+	--search-icon-color: var(--dark-gray);
+	--dropdown-border-color: rgba(43, 57, 69, 0.15);
+	--filters-hover: #e0e0e0;
+	--roller-bg: var(--very-dark-blue-1);
 }

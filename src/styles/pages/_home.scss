@@ -2,17 +2,17 @@
 // HOME
 
 .home {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 
-  &__filter {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+	&__filter {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
 
-    @include breakpoint(tablet-portrait) {
-      flex-direction: column;
-      gap: 5rem;
-    }
-  }
+		@include breakpoint(tablet-portrait) {
+			flex-direction: column;
+			gap: 5rem;
+		}
+	}
 }
