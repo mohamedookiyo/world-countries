@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/layouts/Header';
 import Home from './pages/Home';
 import Country from './pages/Country';
@@ -6,16 +6,16 @@ import './App.scss';
 
 const App = () => {
 	return (
-		<Router>
+		<BrowserRouter>
 			<main>
 				<Header />
 
-				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route exact path="/country/:countryName" component={Country} />
-				</Switch>
+				<Routes>
+					<Route index element={<Home />} />
+					<Route path='/country/:countryName' element={<Country />} />
+				</Routes>
 			</main>
-		</Router>
+		</BrowserRouter>
 	);
 };
 

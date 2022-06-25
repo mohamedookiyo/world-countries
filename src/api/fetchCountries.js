@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Axious instance with baseUrl
 const api = axios.create({
-	baseURL: 'https://restcountries.com/v3.1/',
+	baseURL: 'https://restcountries.com/v2/',
 });
 
 // Fecth all countries

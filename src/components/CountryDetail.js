@@ -10,7 +10,7 @@ const CountryDetail = ({ country, countries }) => {
 	useEffect(() => {
 		let borders = [];
 
-		country.borders.map((border) => {
+		country.borders?.map((border) => {
 			return countries.map((country) => {
 				return border === country.alpha3Code && borders.push(country.name);
 			});
@@ -25,13 +25,13 @@ const CountryDetail = ({ country, countries }) => {
 
 	return (
 		<>
-			<div className="country__flag">
+			<div className='country__flag'>
 				<img src={country.flag} alt={`The flag of ${country.name}`} />
 			</div>
 
-			<div className="country__info">
+			<div className='country__info'>
 				<h2>{country.name}</h2>
-				<div className="country__details">
+				<div className='country__details'>
 					<div>
 						{' '}
 						<p>
@@ -54,7 +54,7 @@ const CountryDetail = ({ country, countries }) => {
 						</p>
 					</div>
 
-					<div className="country__right">
+					<div className='country__right'>
 						<p>
 							Top Level Domain: <span>{country.topLevelDomain}</span>
 						</p>
@@ -67,15 +67,15 @@ const CountryDetail = ({ country, countries }) => {
 					</div>
 				</div>
 
-				<div className="country__border">
+				<div className='country__border'>
 					<p>Border Countries:</p>
-					<div className="country__borders">
+					<div className='country__borders'>
 						{bordersByFullName.length ? (
 							bordersByFullName.map((border) => (
 								<Link
 									to={`/country/${border}`}
 									key={border}
-									className="country__link"
+									className='country__link'
 								>
 									<span>{border}</span>
 								</Link>
